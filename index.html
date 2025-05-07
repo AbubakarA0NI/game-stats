@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <!-- GSAP CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <style>
+      .score {
+        min-height: 12rem;
+        width: 12rem;
+        border-radius: 50%;
+        background: linear-gradient(#4e21ca, transparent);
+      }
+      .score span {
+        font-size: 4rem;
+      }
+
+      .result {
+        gap: 1.5rem;
+        display: flex;
+        align-items: center;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gradient-to-br from-blue-50 to-indigo-100 min-h-screen flex items-center justify-center p-4">
+    <div class="flex flex-col md:flex-row items-stretch gap-6 bg-white rounded-3xl shadow-xl max-w-4xl w-full">
+      <!-- Left Panel -->
+      <div class="bg-gradient-to-br from-indigo-500 to-purple-600 text-white rounded-3xl p-4 w-full md:w-1/2 flex flex-col justify-center h-full">
+        <h2 class="text-3xl font-semibold text-center mb-2">Your Game Stats</h2>
+
+        <div class="result flex flex-center flex-col">
+          <div class="score flex items-center justify-center">
+            <span class="font-bold">76</span>
+          </div>
+        </div>
+
+        <p class="text-xl font-medium mt-2 text-center">Elite Gamer</p>
+        <p class="text-sm opacity-90 text-center my-2">You outperformed 82% of all players in this category.</p>
+      </div>
+
+      <!-- Right Panel -->
+      <div class="w-full md:w-1/2 flex flex-col justify-between h-full">
+        <div class="space-y-4 px-8 py-3">
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Summary</h3>
+          <div class="space-y-3">
+            <div class="flex justify-between items-center bg-red-100 text-red-600 px-4 py-2 rounded-xl">
+              <span><i class="fas fa-bolt mr-2"></i> Reflex</span>
+              <span class="font-bold">84 / 100</span>
+            </div>
+            <div class="flex justify-between items-center bg-yellow-100 text-yellow-700 px-4 py-2 rounded-xl">
+              <span><i class="fas fa-brain mr-2"></i> Strategy</span>
+              <span class="font-bold">91 / 100</span>
+            </div>
+            <div class="flex justify-between items-center bg-green-100 text-green-700 px-4 py-2 rounded-xl">
+              <span><i class="fas fa-comments mr-2"></i> Teamwork</span>
+              <span class="font-bold">78 / 100</span>
+            </div>
+            <div class="flex justify-between items-center bg-blue-100 text-blue-700 px-4 py-2 rounded-xl">
+              <span><i class="fas fa-eye mr-2"></i> Accuracy</span>
+              <span class="font-bold">88 / 100</span>
+            </div>
+          </div>
+        </div>
+        <button class="mt-6 w-auto bg-indigo-600 text-white py-2 rounded-xl hover:bg-indigo-700 transition mx-8 my-3">Continue</button>
+      </div>
+    </div>
+  </body>
+</html>
